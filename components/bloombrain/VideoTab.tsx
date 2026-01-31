@@ -1,8 +1,6 @@
-
 import React, { useState, useEffect } from 'react';
-import { generateVeoVideo, checkApiKey, requestApiKey } from '../../lib/gemini';
-// Fix: Use the correct path for VideoGenerationStatus from types/index.ts
-import { VideoGenerationStatus } from '../../types/index';
+import { generateVeoVideo, checkApiKey, requestApiKey } from '../../lib/gemini.ts';
+import { VideoGenerationStatus } from '../../types/index.ts';
 import { Wand2, Loader2, Play, Download, ExternalLink, AlertTriangle, Stars, Sparkles } from 'lucide-react';
 
 const MAGIC_MESSAGES = [

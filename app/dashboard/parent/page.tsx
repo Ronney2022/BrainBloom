@@ -1,4 +1,3 @@
-
 "use client";
 import React, { useState, useEffect } from 'react';
 import { 
@@ -29,7 +28,7 @@ import {
   History,
   Star
 } from 'lucide-react';
-import { getFastResponse } from '../../../lib/gemini';
+import { getFastResponse } from '../../../lib/gemini.ts';
 
 interface ParentDashboardProps {
   onBackToChild: () => void;
@@ -167,7 +166,6 @@ export default function ParentDashboard({ onBackToChild }: ParentDashboardProps)
           <StatCard label="Focus Stability" value={`${fsiPercentage}%`} icon={<Zap size={18} />} color="indigo" score={fsiPercentage} />
           <StatCard label="Memory Average" value={wmgcScore.toFixed(1)} icon={<LineChart size={18} />} color="emerald" score={wmgcScore * 10} />
           <StatCard label="Flexibility" value={`${cfmPercentage}%`} icon={<Shuffle size={18} />} color="amber" score={cfmPercentage} />
-          {/* Added missing Star icon from lucide-react */}
           <StatCard label="Seeds Earned" value={seeds.toString()} icon={<Star size={18} />} color="blue" score={seeds * 5} />
         </section>
 

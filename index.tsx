@@ -1,6 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import Page from './app/page';
+import Page from './app/page.tsx';
 
 const container = document.getElementById('root');
 if (container) {

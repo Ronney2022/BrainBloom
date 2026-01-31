@@ -1,7 +1,5 @@
-
 import React from 'react';
-// Fix: Use the correct path for AppTab from types/index.ts
-import { AppTab } from '../types/index';
+import { AppTab } from '../types/index.ts';
 import { 
   MessageSquare, 
   Video, 

@@ -1,4 +1,3 @@
-
 "use client";
 import React, { useState, useEffect, useCallback } from 'react';
 import { 
@@ -12,17 +11,17 @@ import {
   PartyPopper,
   Gift,
 } from 'lucide-react';
-import Sidebar from '../../../components/layout/Sidebar';
-import ChatTab from '../../../components/bloombrain/ChatTab';
-import VideoTab from '../../../components/bloombrain/VideoTab';
-import FlashTab from '../../../components/bloombrain/FlashTab';
-import AnalyzeTab from '../../../components/bloombrain/AnalyzeTab';
-import LiveTab from '../../../components/bloombrain/LiveTab';
-import MapsTab from '../../../components/bloombrain/MapsTab';
-import CognitiveTab from '../../../components/bloombrain/CognitiveTab';
-import GameModule from '../../../components/bloombrain/GameModule';
-import { AppTab, BloomBrainActivity } from '../../../types/index';
-import { getFastResponse } from '../../../lib/gemini';
+import Sidebar from '../../../components/layout/Sidebar.tsx';
+import ChatTab from '../../../components/bloombrain/ChatTab.tsx';
+import VideoTab from '../../../components/bloombrain/VideoTab.tsx';
+import FlashTab from '../../../components/bloombrain/FlashTab.tsx';
+import AnalyzeTab from '../../../components/bloombrain/AnalyzeTab.tsx';
+import LiveTab from '../../../components/bloombrain/LiveTab.tsx';
+import MapsTab from '../../../components/bloombrain/MapsTab.tsx';
+import CognitiveTab from '../../../components/bloombrain/CognitiveTab.tsx';
+import GameModule from '../../../components/bloombrain/GameModule.tsx';
+import { AppTab, BloomBrainActivity } from '../../../types/index.ts';
+import { getFastResponse } from '../../../lib/gemini.ts';
 
 type ViewMode = 'mission' | 'tab';
 type AgeGroup = "4-6" | "7-9" | "10-12";
