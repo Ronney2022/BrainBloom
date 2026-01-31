@@ -1,0 +1,9 @@
+{
+  "name": "BloomBrain AI Studio",
+  "description": "An all-in-one AI creative suite featuring high-speed reasoning, pro-level chat, video generation with Veo, and advanced video understanding.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}

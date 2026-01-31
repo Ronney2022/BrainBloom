@@ -1,0 +1,108 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f8fafc;
+  --foreground: #1e293b;
+  --primary: #6366f1;
+  --secondary: #10b981;
+  --accent: #f59e0b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+  margin: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+  border: 2px solid #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.mirror {
+  transform: scaleX(-1);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+}
+
+.bloom-gradient {
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+}
+
+.kid-shadow {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Chat Specific Animations */
+@keyframes message-fly-in-user {
+  0% { 
+    transform: translate(20px, 40px) scale(0.8); 
+    opacity: 0; 
+  }
+  100% { 
+    transform: translate(0, 0) scale(1); 
+    opacity: 1; 
+  }
+}
+
+@keyframes message-pop-in-ai {
+  0% { 
+    transform: scale(0.7); 
+    opacity: 0; 
+  }
+  70% { 
+    transform: scale(1.05); 
+    opacity: 1;
+  }
+  100% { 
+    transform: scale(1); 
+    opacity: 1; 
+  }
+}
+
+.animate-message-user {
+  animation: message-fly-in-user 0.45s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+.animate-message-ai {
+  animation: message-pop-in-ai 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
